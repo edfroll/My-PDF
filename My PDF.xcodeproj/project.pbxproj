@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		CCFB446D2EE1E4FB00407C14 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFB446A2EE1E4FB00407C14 /* ContentView.swift */; };
+		CCFB446E2EE1E4FB00407C14 /* My_PDFApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFB446B2EE1E4FB00407C14 /* My_PDFApp.swift */; };
+		CCFB446F2EE1E4FB00407C14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCFB44692EE1E4FB00407C14 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		CCFB444D2EE1E0B300407C14 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,14 +33,12 @@
 		CCFB443F2EE1E0B100407C14 /* My PDF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My PDF.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCFB444C2EE1E0B300407C14 /* My PDFTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My PDFTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCFB44562EE1E0B300407C14 /* My PDFUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My PDFUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCFB44692EE1E4FB00407C14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CCFB446A2EE1E4FB00407C14 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CCFB446B2EE1E4FB00407C14 /* My_PDFApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_PDFApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		CCFB44412EE1E0B100407C14 /* My PDF */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "My PDF";
-			sourceTree = "<group>";
-		};
 		CCFB444F2EE1E0B300407C14 /* My PDFTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "My PDFTests";
@@ -75,9 +79,7 @@
 		CCFB44362EE1E0B100407C14 = {
 			isa = PBXGroup;
 			children = (
-				CCFB44412EE1E0B100407C14 /* My PDF */,
-				CCFB444F2EE1E0B300407C14 /* My PDFTests */,
-				CCFB44592EE1E0B300407C14 /* My PDFUITests */,
+				CCFB446C2EE1E4FB00407C14 /* My PDF */,
 				CCFB44402EE1E0B100407C14 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +92,26 @@
 				CCFB44562EE1E0B300407C14 /* My PDFUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		CCFB446C2EE1E4FB00407C14 /* My PDF */ = {
+			isa = PBXGroup;
+			children = (
+				CCFB446A2EE1E4FB00407C14 /* ContentView.swift */,
+				CCFB446B2EE1E4FB00407C14 /* My_PDFApp.swift */,
+				CCFB44692EE1E4FB00407C14 /* Assets.xcassets */,
+				CCFB44702EE1E50100407C14 /* Tests */,
+			);
+			path = "My PDF";
+			sourceTree = "<group>";
+		};
+		CCFB44702EE1E50100407C14 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CCFB444F2EE1E0B300407C14 /* My PDFTests */,
+				CCFB44592EE1E0B300407C14 /* My PDFUITests */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,9 +128,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				CCFB44412EE1E0B100407C14 /* My PDF */,
 			);
 			name = "My PDF";
 			packageProductDependencies = (
@@ -212,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCFB446F2EE1E4FB00407C14 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +256,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCFB446D2EE1E4FB00407C14 /* ContentView.swift in Sources */,
+				CCFB446E2EE1E4FB00407C14 /* My_PDFApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
