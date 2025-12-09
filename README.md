@@ -7,8 +7,11 @@ iOS mobile application for converting images to PDF documents. Built with SwiftU
 ## Features
 
 ### Document Creation
-![Editor View](images/IMG_1993.PNG)
-![](images/IMG_1994.PNG)
+<div align="center">
+  <img src="images/IMG_1993.PNG" width="300" alt="Editor View">
+  <img src="images/IMG_1994.PNG" width="300" alt="Image Selection">
+</div>
+
 - Select multiple images from photo library
 - Real-time preview grid with page ordering
 - Custom document naming
@@ -16,7 +19,10 @@ iOS mobile application for converting images to PDF documents. Built with SwiftU
 - Navigate to PDF reader immediately after generation
 
 ### PDF Reader
-![PDF Reader](images/IMG_1995.PNG)
+<p align="center">
+  <img src="images/IMG_1995.PNG" width="300" alt="PDF Reader Interface">
+</p>
+
 - Swipe-based page navigation
 - Delete individual pages with confirmation
 - Save document to CoreData
@@ -24,14 +30,20 @@ iOS mobile application for converting images to PDF documents. Built with SwiftU
 - Page counter display
 
 ### Saved Documents
-![Saved Documents](images/IMG_1996.PNG)
+<p align="center">
+  <img src="images/IMG_1996.PNG" width="300" alt="Saved Documents List">
+</p>
+
 - List view of all saved PDFs
 - Thumbnail preview with metadata (name, date, page count)
 - Context menu actions: Share, Merge, Delete
 - Merge mode: combine 2+ documents into single PDF
 
 ### User Interface
-![Welcome screen](images/IMG_1998 2.PNG)
+<div align="center">
+  <img src="images/IMG_1998 2.PNG" width="300" alt="Welcome Screen">
+</div>
+
 - Welcome screen on first launch
 - Tab-based navigation (Create / Documents)
 - Loading overlays for async operations
