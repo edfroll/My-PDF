@@ -30,14 +30,16 @@ iOS mobile application for converting images to PDF documents. Built with SwiftU
 - Page counter display
 
 ### Saved Documents
-<p align="center">
-  <img src="images/IMG_1996.PNG" width="300" alt="Saved Documents List">
-</p>
+<div align="center">
+  <img src="images/IMG_1996.PNG" width="250" alt="Saved Documents List">
+  <img src="images/IMG_1997.PNG" width="250" alt="Merge Documents View">
+</div>
 
 - List view of all saved PDFs
 - Thumbnail preview with metadata (name, date, page count)
 - Context menu actions: Share, Merge, Delete
 - Merge mode: combine 2+ documents into single PDF
+
 
 ### User Interface
 <div align="center">
