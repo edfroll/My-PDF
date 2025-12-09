@@ -16,11 +16,13 @@ struct PDFAppApp: App {
     
     var body: some Scene {
         WindowGroup {
-            MainTabView()
-                .fullScreenCover(isPresented: .constant(!hasSeenWelcome)) {
-                    WelcomeView(isPresented: $hasSeenWelcome)
-                        .interactiveDismissDisabled()
-                }
+            if hasSeenWelcome {
+                MainTabView()
+            } else {
+                WelcomeView(onComplete: {
+                    hasSeenWelcome = true
+                })
+            }
         }
     }
 }

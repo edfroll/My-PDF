@@ -29,7 +29,7 @@ struct EditorView: View {
                     .padding()
                 }
                 .onTapGesture {
-                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                    viewModel.hideKeyboard()
                 }
                 
                 NavigationLink(isActive: $isNavigationActive) {
@@ -57,60 +57,6 @@ struct EditorView: View {
             .overlay {
                 if viewModel.isLoading {
                     LoadingOverlay()
-                }
-            }
-        }
-    }
-    
-    // MARK: - PHPicker Representable // Можно добавить в другой файл
-    struct PHPicker: UIViewControllerRepresentable {
-        @Binding var selectedImages: [UIImage]
-        var onComplete: () -> Void = {}
-        
-        func makeUIViewController(context: Context) -> PHPickerViewController {
-            var config = PHPickerConfiguration(photoLibrary: .shared())
-            config.filter = .images
-            config.selectionLimit = 0
-            let picker = PHPickerViewController(configuration: config)
-            picker.delegate = context.coordinator
-            return picker
-        }
-        
-        func updateUIViewController(_ uiViewController: PHPickerViewController, context: Context) {}
-        
-        func makeCoordinator() -> Coordinator {
-            Coordinator(self)
-        }
-        
-        class Coordinator: NSObject, PHPickerViewControllerDelegate {
-            let parent: PHPicker
-            
-            init(_ parent: PHPicker) {
-                self.parent = parent
-            }
-            
-            func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
-                picker.dismiss(animated: true)
-                let group = DispatchGroup()
-                var images: [UIImage] = []
-                
-                for result in results {
-                    group.enter()
-                    if result.itemProvider.canLoadObject(ofClass: UIImage.self) {
-                        result.itemProvider.loadObject(ofClass: UIImage.self) { image, error in
-                            if let image = image as? UIImage {
-                                images.append(image)
-                            }
-                            group.leave()
-                        }
-                    } else {
-                        group.leave()
-                    }
-                }
-                
-                group.notify(queue: .main) {
-                    self.parent.selectedImages.append(contentsOf: images)
-                    self.parent.onComplete()
                 }
             }
         }

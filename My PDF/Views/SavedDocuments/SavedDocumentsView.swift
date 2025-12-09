@@ -65,7 +65,7 @@ struct SavedDocumentsView: View {
                     if let document = selectedDocument {
                         PDFReaderView(document: document,
                                       isPresented: $isReaderPresented,
-                                      onDismiss: { }// optional cleanup
+                                      onDismiss: { viewModel.onAppear() }
                         )
                     }
                 } label: {

@@ -78,5 +78,9 @@ final class EditorViewModel: ObservableObject {
         documentName = ""
         generatedPDF = nil
     }
+    
+    func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
 }
 

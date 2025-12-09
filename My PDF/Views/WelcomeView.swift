@@ -7,8 +7,7 @@
 import SwiftUI
 
 struct WelcomeView: View {
-    
-    @Binding var isPresented: Bool
+    let onComplete: () -> Void
     
     var body: some View {
         VStack(spacing: 30) {
@@ -52,9 +51,9 @@ struct WelcomeView: View {
             
             Spacer()
             
-            // Get Started Button
+            // Continue Button
             Button {
-                isPresented = true
+                onComplete()
             } label: {
                 Text("Continue")
                     .font(.headline)

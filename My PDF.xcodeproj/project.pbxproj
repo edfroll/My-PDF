@@ -12,7 +12,7 @@
 		CC37D7902EE77BB700340DBD /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC37D78F2EE77BB200340DBD /* ShareSheet.swift */; };
 		CC37D79D2EE77D0100340DBD /* DocumentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC37D79C2EE77CFA00340DBD /* DocumentCell.swift */; };
 		CC37D7A02EE77D5200340DBD /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC37D79F2EE77D4E00340DBD /* MainTabView.swift */; };
-		CC37D8132EE87EB500340DBD /* My-PDF-Reserve-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC37D8122EE87EB500340DBD /* My-PDF-Reserve-Info.plist */; };
+		CC37D8132EE87EB500340DBD /* My-PDF-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC37D8122EE87EB500340DBD /* My-PDF-Info.plist */; };
 		CC37D81B2EE8899E00340DBD /* PDFDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC37D8192EE8899E00340DBD /* PDFDataModel.xcdatamodeld */; };
 		CC37D8342EE88DB600340DBD /* PDFKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC37D8322EE88DB600340DBD /* PDFKitManager.swift */; };
 		CC37D8352EE88DB600340DBD /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC37D8332EE88DB600340DBD /* CoreDataManager.swift */; };
@@ -20,6 +20,7 @@
 		CC37D83B2EE891F300340DBD /* DocumentEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC37D8372EE891F300340DBD /* DocumentEntity+CoreDataProperties.swift */; };
 		CC37D83C2EE891F300340DBD /* PageEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC37D8382EE891F300340DBD /* PageEntity+CoreDataClass.swift */; };
 		CC37D83D2EE891F300340DBD /* PageEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC37D8392EE891F300340DBD /* PageEntity+CoreDataProperties.swift */; };
+		CC37D83F2EE8D02D00340DBD /* PHPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC37D83E2EE8D02800340DBD /* PHPicker.swift */; };
 		CC91236F2EE6F25900F16C77 /* PDFDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC91236E2EE6F24E00F16C77 /* PDFDocument.swift */; };
 		CC9123722EE6F2A100F16C77 /* PDFPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9123712EE6F2A100F16C77 /* PDFPageModel.swift */; };
 		CC9123782EE6F33400F16C77 /* EditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9123772EE6F32900F16C77 /* EditorViewModel.swift */; };
@@ -56,7 +57,7 @@
 		CC37D78F2EE77BB200340DBD /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
 		CC37D79C2EE77CFA00340DBD /* DocumentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentCell.swift; sourceTree = "<group>"; };
 		CC37D79F2EE77D4E00340DBD /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
-		CC37D8122EE87EB500340DBD /* My-PDF-Reserve-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "My-PDF-Reserve-Info.plist"; path = "My PDF/My-PDF-Reserve-Info.plist"; sourceTree = SOURCE_ROOT; };
+		CC37D8122EE87EB500340DBD /* My-PDF-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "My-PDF-Info.plist"; path = "My PDF/My-PDF-Info.plist"; sourceTree = SOURCE_ROOT; };
 		CC37D81A2EE8899E00340DBD /* PDFDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PDFDataModel.xcdatamodel; sourceTree = "<group>"; };
 		CC37D8322EE88DB600340DBD /* PDFKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFKitManager.swift; sourceTree = "<group>"; };
 		CC37D8332EE88DB600340DBD /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -64,6 +65,7 @@
 		CC37D8372EE891F300340DBD /* DocumentEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DocumentEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CC37D8382EE891F300340DBD /* PageEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PageEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		CC37D8392EE891F300340DBD /* PageEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PageEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CC37D83E2EE8D02800340DBD /* PHPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHPicker.swift; sourceTree = "<group>"; };
 		CC91236E2EE6F24E00F16C77 /* PDFDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFDocument.swift; sourceTree = "<group>"; };
 		CC9123712EE6F2A100F16C77 /* PDFPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFPageModel.swift; sourceTree = "<group>"; };
 		CC9123772EE6F32900F16C77 /* EditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewModel.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 		CC37D78C2EE751F100340DBD /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				CC37D83E2EE8D02800340DBD /* PHPicker.swift */,
 				CC37D78F2EE77BB200340DBD /* ShareSheet.swift */,
 				CC37D78D2EE77B2100340DBD /* LoadingOverlay.swift */,
 			);
@@ -241,7 +244,7 @@
 		CCFB446C2EE1E4FB00407C14 /* My PDF */ = {
 			isa = PBXGroup;
 			children = (
-				CC37D8122EE87EB500340DBD /* My-PDF-Reserve-Info.plist */,
+				CC37D8122EE87EB500340DBD /* My-PDF-Info.plist */,
 				CC37D79E2EE77D3A00340DBD /* App */,
 				CC9123702EE6F28200F16C77 /* Models */,
 				CC9123732EE6F2B500F16C77 /* ViewModels */,
@@ -382,7 +385,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC37D8132EE87EB500340DBD /* My-PDF-Reserve-Info.plist in Resources */,
+				CC37D8132EE87EB500340DBD /* My-PDF-Info.plist in Resources */,
 				CCFB446F2EE1E4FB00407C14 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +415,7 @@
 				CC9123802EE6F3E800F16C77 /* EditorView.swift in Sources */,
 				CC91236F2EE6F25900F16C77 /* PDFDocument.swift in Sources */,
 				CC37D83A2EE891F300340DBD /* DocumentEntity+CoreDataClass.swift in Sources */,
+				CC37D83F2EE8D02D00340DBD /* PHPicker.swift in Sources */,
 				CC37D83B2EE891F300340DBD /* DocumentEntity+CoreDataProperties.swift in Sources */,
 				CC37D83C2EE891F300340DBD /* PageEntity+CoreDataClass.swift in Sources */,
 				CC37D83D2EE891F300340DBD /* PageEntity+CoreDataProperties.swift in Sources */,
@@ -594,6 +598,8 @@
 				DEVELOPMENT_TEAM = 32AK6Z32QS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFileProviderDomainUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to your photos to convert them to PDF";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -627,6 +633,8 @@
 				DEVELOPMENT_TEAM = 32AK6Z32QS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFileProviderDomainUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to your photos to convert them to PDF";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
