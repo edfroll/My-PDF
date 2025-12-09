@@ -41,7 +41,7 @@ iOS mobile application for converting images to PDF documents. Built with SwiftU
 
 ### User Interface
 <div align="center">
-  <img src="images/IMG_1998_2.PNG" width="300" alt="Welcome Screen">
+  <img src="images/IMG_1998 2.PNG" width="300" alt="Welcome Screen">
 </div>
 
 - Welcome screen on first launch
