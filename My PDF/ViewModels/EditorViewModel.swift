@@ -1,0 +1,82 @@
+//
+//  EditorViewModel.swift
+//  My PDF
+//
+//  Created by Эдвард on 12/8/25.
+//
+import SwiftUI
+import Combine
+
+@MainActor
+final class EditorViewModel: ObservableObject {
+    
+    // MARK: - Published State
+    @Published var selectedImages: [UIImage] = []
+    @Published var documentName: String = ""
+    @Published var isLoading = false
+    @Published var generatedPDF: PDFDocument?
+    @Published var showImagePicker = false
+    
+    // MARK: - Dependencies
+    private let pdfManager = PDFKitManager()
+    
+    // MARK: - Computed Properties
+    var canGeneratePDF: Bool {
+        !selectedImages.isEmpty
+    }
+    
+    var displayName: String {
+        documentName.isEmpty ? "Untitled Document" : documentName
+    }
+    
+    // MARK: - Actions
+    func addImages(_ images: [UIImage]) {
+        selectedImages.append(contentsOf: images)
+    }
+    
+    func removeImage(at index: Int) {
+        guard index < selectedImages.count else { return }
+        selectedImages.remove(at: index)
+    }
+    
+    func moveImage(from source: IndexSet, to destination: Int) {
+        selectedImages.move(fromOffsets: source, toOffset: destination)
+    }
+    
+    func generatePDF() async {
+        guard canGeneratePDF else { return }
+        
+        isLoading = true
+        defer { isLoading = false }
+        
+        let images = selectedImages
+        let name = displayName
+        print("🔍 Generating PDF with name: '\(name)'")
+        let manager = pdfManager
+        
+        let task = Task.detached(priority: .userInitiated) { () -> PDFDocument? in
+            do {
+                let document = try await manager.createPDF(from: images, name: name)
+                print("✅ Created document: '\(document.name)'")
+                return document
+            } catch {
+                print("❌ PDF generation failed: \(error.localizedDescription)")
+                return nil
+            }
+        }
+        
+        let result = await task.value
+        
+        if let document = result {
+            print("📄 Setting generatedPDF: '\(document.name)'")
+            generatedPDF = document
+        }
+    }
+    
+    func reset() {
+        selectedImages = []
+        documentName = ""
+        generatedPDF = nil
+    }
+}
+
