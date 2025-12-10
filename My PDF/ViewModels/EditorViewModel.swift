@@ -45,33 +45,27 @@ final class EditorViewModel: ObservableObject {
     
     func generatePDF() async {
         guard canGeneratePDF else { return }
-        
-        isLoading = true
-        defer { isLoading = false }
-        
+
+        await MainActor.run {
+            isLoading = true
+        }
+
         let images = selectedImages
         let name = displayName
-        print("🔍 Generating PDF with name: '\(name)'")
         let manager = pdfManager
-        
-        let task = Task.detached(priority: .userInitiated) { () -> PDFDocument? in
-            do {
-                let document = try await manager.createPDF(from: images, name: name)
-                print("✅ Created document: '\(document.name)'")
-                return document
-            } catch {
-                print("❌ PDF generation failed: \(error.localizedDescription)")
-                return nil
+
+        let document = await Task.detached(priority: .userInitiated) {
+            try? await manager.createPDF(from: images, name: name)
+        }.value
+
+        await MainActor.run {
+            if let document = document {
+                self.generatedPDF = document
             }
-        }
-        
-        let result = await task.value
-        
-        if let document = result {
-            print("📄 Setting generatedPDF: '\(document.name)'")
-            generatedPDF = document
+            self.isLoading = false
         }
     }
+
     
     func reset() {
         selectedImages = []
